@@ -1,23 +1,32 @@
 #include <stdio.h>
 #include <stdlib.h>
-int main()
+int emanos(ano)
 {
-    int ano, opcao;
-    printf("Digite seu anoo de nascimento: ");
-    scanf("%d", &ano);
-    printf("\n");
     int idade;
     idade=2019-ano;
-    printf("%d anos", idade);
-    printf("\n");
+    printf("%d anos\n", idade);
+}
+int emmes(ano)
+{
     int mes;
     mes=(2019-ano)*12;
-    printf("%d meses", mes);
-    printf("\n");
+    printf("%d meses\n", mes);
+}
+int emdias(ano)
+{
     int dia;
     dia=(2019-ano)*365;
-    printf("%d dias", dia);
-    printf("\n");
+    printf("%d dias\n", dia);
+}
+
+int main()
+{
+    int ano;
+    printf("Digite seu ano de nascimento: ");
+    scanf("%d\n", &ano);
+    emanos(ano);
+    emmes(ano);
+    emdias(ano);
     system("pause");
     return 0;
 }
